@@ -5,6 +5,7 @@ tags: lyric
 permalink: violet-evergarden-pv4violet-snow-huransuyu-ver-lyric
 photos:
   - "/images/violet_snow_fr_cover.png"
+categories: no category
 ---
 
 {% raw %}

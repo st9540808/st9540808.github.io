@@ -1,8 +1,9 @@
 ---
 title: Install IgH EtherCAT Master on Raspberry Pi & Backup
 date: 2018-01-27 19:39:30
-tags: "Raspberry Pi"
+tags: Raspberry Pi
 permalink: install-igh-ethercat-master-on-raspberry-pi-backup
+categories: no category
 ---
 
 {% raw %}
