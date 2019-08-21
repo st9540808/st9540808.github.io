@@ -343,7 +343,7 @@ body {
 }
 .article-entry hr,
 .widget hr {
-  border: 1px solid #ddd;
+  border: 1px dashed #ddd;
 }
 .article-entry strong,
 .widget strong {
