@@ -1322,7 +1322,7 @@ a.article-title:hover {
   border: 1px solid #858585;
   border-radius: 3px;
   margin: 0px 2px;
-  padding: 0.3em 0.3em 0.1em 0.3em;
+  padding: 0.3em 0.3em 0.18em 0.3em;
 }
 .article-entry pre code {
   background: none;
@@ -1534,7 +1534,7 @@ pre .javascript .function {
   border: 1px solid #858585;
   border-radius: 3px;
   margin: 0px 2px;
-  padding: 0.3em 0.3em 0.1em 0.3em;
+  padding: 0.3em 0.3em 0.18em 0.3em;
 }
 .article-entry pre code {
   background: none;
