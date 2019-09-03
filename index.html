@@ -90,7 +90,7 @@
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck037nzl90006gqd9s53ibd7r" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck0390b6g00066gd9go8f6jap" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/02/ros2-get-started/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -127,7 +127,7 @@ directory tree:</p>
 <p>首先必須先建立一個 node，</p>
 <p><code>class Listener</code> 使用繼承自 <code>rclcpp::Node</code>，並在 <code>Node</code> 的 constructor 給予這個 node 的名稱。也可以使用 <code>rclcpp::Node::make_shared()</code> 建立一個 <code>std::shared_ptr&lt;rclcpp::Node&gt;</code> 類型的物件。</p>
 <p>接下來由 <code>rclcpp::Node::create_subscription()</code> 註冊 callback function，此 callback 會在呼叫 <code>rclcpp::spin()</code> 時被執行。</p>
-<p>當無法使用 <code>auto</code> 型態宣告變數，而需要完整型態時，要使用 <code>rclcpp</code> 定義好的 <code>SharedPtr </code> 來管理物件，以下為例 : “…” 為訂閱 topic 的資料型態。</p>
+<p>當無法使用 <code>auto</code> 型態宣告變數，而需要完整型態時，要使用 <code>rclcpp</code> 定義好的 <code>SharedPtr</code> 來管理物件，以下為例 : “…” 為訂閱 topic 的資料型態。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> rclcpp::Subscription&lt;...&gt;::SharedPtr = <span class="built_in">std</span>::<span class="built_in">shared_ptr</span>&lt;...&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="publisher"><a class="header-anchor" href="#publisher"></a>publisher:</h3>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;chrono&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;memory&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;utility&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"rclcpp/rclcpp.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"std_msgs/msg/string.hpp"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>::chrono_literals;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Talker</span> :</span> <span class="keyword">public</span> rclcpp::Node</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Talker()</span><br><span class="line">  : Node(<span class="string">"talker"</span>), count_(<span class="number">0</span>) &#123;</span><br><span class="line">    pub_ = <span class="keyword">this</span>-&gt;create_publisher&lt;std_msgs::msg::String&gt;(<span class="string">"chatter"</span>);</span><br><span class="line">    timerPtr_ = <span class="keyword">this</span>-&gt;create_wall_timer(<span class="number">1</span>s,</span><br><span class="line">      [<span class="keyword">this</span>]() &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;timerPtr_-&gt;reset();</span><br><span class="line">        <span class="keyword">auto</span> message = std_msgs::msg::String();</span><br><span class="line">        message.data = <span class="string">"Hello, world! "</span> + <span class="built_in">std</span>::to_string(<span class="keyword">this</span>-&gt;count_++);</span><br><span class="line">        RCLCPP_INFO(<span class="keyword">this</span>-&gt;get_logger(), <span class="string">"Publishing: '%s'"</span>, message.data.c_str());</span><br><span class="line">        <span class="keyword">this</span>-&gt;pub_-&gt;publish(message);</span><br><span class="line">      &#125;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  <span class="keyword">int</span> count_;</span><br><span class="line">  rclcpp::TimerBase::SharedPtr timerPtr_;</span><br><span class="line">  rclcpp::Publisher&lt;std_msgs::msg::String&gt;::SharedPtr pub_;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  rclcpp::init(argc, argv);</span><br><span class="line">  <span class="keyword">auto</span> node = <span class="built_in">std</span>::make_shared&lt;Talker&gt;();</span><br><span class="line">  rclcpp::spin(node);</span><br><span class="line">  rclcpp::shutdown();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -208,7 +208,7 @@ rclcpp library api : <a href="http://docs.ros2.org/dashing/api/rclcpp/" target="
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/08/15/demo/" data-id="ck037nzku0001gqd9p6nrlic2" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/08/15/demo/" data-id="ck0390b6100016gd9mov0hirg" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/08/15/demo/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -492,7 +492,7 @@ with lazy continuation.</p>
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" data-id="ck037nzl00002gqd9gbfxejw6" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" data-id="ck0390b6700026gd90v5azvmq" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -643,7 +643,7 @@ $ ln -s /opt/etherlab/bin/ethercat /usr/local/bin/ethercat
   <div class="article-gallery">
     <div class="article-gallery-photos">
       
-        <a class="article-gallery-img fancybox" href="/images/violet_snow_fr_cover.png" rel="gallery_ck037nzl30003gqd94ml22csf">
+        <a class="article-gallery-img fancybox" href="/images/violet_snow_fr_cover.png" rel="gallery_ck0390b6a00036gd9jmc439j5">
           <img src="/images/violet_snow_fr_cover.png" itemprop="image">
         </a>
       
@@ -665,7 +665,7 @@ $ ln -s /opt/etherlab/bin/ethercat /usr/local/bin/ethercat
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" data-id="ck037nzl30003gqd94ml22csf" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" data-id="ck0390b6a00036gd9jmc439j5" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/#disqus_thread" class="article-comment-link">Comments</a>
       
