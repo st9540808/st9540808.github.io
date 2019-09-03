@@ -190,6 +190,10 @@ pre .javascript .function {
 .warning figure {
   margin-bottom: 16px !important;
 }
+h3 code {
+  color: #f8f8f8 !important;
+  border-width: 0px !important;
+}
 .danger {
   background-color: #feeeed;
   border-style: solid;

@@ -5,15 +5,22 @@
   
 
   
-  <title>Blog</title>
+  <title>ROS2 開始上手 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://st9540808.github.io/index.html">
+  <meta name="description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: 1$ ros2 pkg create --dependencies [deps] 以下為具有兩個 p">
+<meta name="keywords" content="ROS2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROS2 開始上手">
+<meta property="og:url" content="http://st9540808.github.io/2019/09/02/ros2-get-started/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: 1$ ros2 pkg create --dependencies [deps] 以下為具有兩個 p">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.imgur.com/AnQVROq.png">
+<meta property="og:updated_time" content="2019-09-03T02:24:31.787Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="ROS2 開始上手">
+<meta name="twitter:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: 1$ ros2 pkg create --dependencies [deps] 以下為具有兩個 p">
+<meta name="twitter:image" content="https://i.imgur.com/AnQVROq.png">
   
   
     <link rel="icon" href="/css/images/favicon.png">
@@ -61,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-ros2-get-started" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ros2-get-started" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
     <a href="/2019/09/02/ros2-get-started/" class="article-date">
@@ -82,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/ros2-get-started/">ROS2 開始上手</a>
+    <h1 class="article-title" itemprop="name">
+      ROS2 開始上手
     </h1>
   
 
@@ -101,9 +106,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         
+          <div id="toc">
+            <h2 id="toc-title"><span>contents</span></h2>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#create-ros2-workspace"><span class="toc-number">1.</span> <span class="toc-text">Create ROS2 workspace</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#write-a-publisher-and-a-subscriber"><span class="toc-number">2.</span> <span class="toc-text">Write a publisher and a subscriber</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#subscriber"><span class="toc-number">2.1.</span> <span class="toc-text">subscriber:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#publisher"><span class="toc-number">2.2.</span> <span class="toc-text">publisher:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#std-chrono"><span class="toc-number">2.3.</span> <span class="toc-text">std::chrono</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#demo"><span class="toc-number">2.4.</span> <span class="toc-text">demo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+          </div>
         
-          <div class="toggle-content">
-            <p>這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (<code>setup.bash</code> 腳本)<br>
+        
+          <p>這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (<code>setup.bash</code> 腳本)<br>
 這邊使用 dashing distro。</p>
 <h2 id="create-ros2-workspace"><a class="header-anchor" href="#create-ros2-workspace"></a>Create ROS2 workspace</h2>
 <p>create an empty package:</p>
@@ -174,559 +183,31 @@ rclcpp library api : <a href="http://docs.ros2.org/dashing/api/rclcpp/" target="
 <li><input type="checkbox" id="checkbox1"><label for="checkbox1"> ROS2 QoS</label></li>
 </ul>
 
-          </div>
-          <div class="toggle-input article-more-link"><a>Read More +</a></div>
         
       
     </div>
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/15/demo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Markdown Demo</div>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-  
-    <article id="post-demo" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-    <a href="/2019/08/15/demo/" class="article-date">
-  <time datetime="2019-08-15T08:23:34.000Z" itemprop="datePublished">2019-08-15</time>
-</a>
-    
-    
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/15/demo/">Markdown Demo</a>
-    </h1>
-  
-
-      </header>
-    
-    <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/08/15/demo/" data-id="ck037nzku0001gqd9p6nrlic2" class="article-share-link">Share</a>
-      
-        <a href="http://st9540808.github.io/2019/08/15/demo/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-          <div class="toggle-content">
-            <hr>
-<p><strong>Advertisement :)</strong></p>
-<ul>
-<li><strong><a href="https://nodeca.github.io/pica/demo/" target="_blank" rel="noopener">pica</a></strong> - high quality and fast image<br>
-resize in browser.</li>
-<li><strong><a href="https://github.com/nodeca/babelfish/" target="_blank" rel="noopener">babelfish</a></strong> - developer friendly<br>
-i18n with plurals support and easy syntax.</li>
-</ul>
-<p>You will like those projects!</p>
-<hr>
-<h1 id="h1-heading-8"><a class="header-anchor" href="#h1-heading-8"></a>h1 Heading 8-)</h1>
-<h2 id="h2-heading"><a class="header-anchor" href="#h2-heading"></a>h2 Heading</h2>
-<h3 id="h3-heading"><a class="header-anchor" href="#h3-heading"></a>h3 Heading</h3>
-<h4 id="h4-heading"><a class="header-anchor" href="#h4-heading"></a>h4 Heading</h4>
-<h5 id="h5-heading"><a class="header-anchor" href="#h5-heading"></a>h5 Heading</h5>
-<h6 id="h6-heading"><a class="header-anchor" href="#h6-heading"></a>h6 Heading</h6>
-<h2 id="horizontal-rules"><a class="header-anchor" href="#horizontal-rules"></a>Horizontal Rules</h2>
-<hr>
-<hr>
-<hr>
-<h2 id="typographic-replacements"><a class="header-anchor" href="#typographic-replacements"></a>Typographic replacements</h2>
-<p>Enable typographer option to see result.</p>
-<p>© © ® ® ™ ™ § § ±</p>
-<p>test… test… test… test?.. test!..</p>
-<p>!!! ??? ,  – —</p>
-<p>“Smartypants, double quotes” and ‘single quotes’</p>
-<h2 id="emphasis"><a class="header-anchor" href="#emphasis"></a>Emphasis</h2>
-<p><strong>This is bold text</strong></p>
-<p><strong>This is bold text</strong></p>
-<p><em>This is italic text</em></p>
-<p><em>This is italic text</em></p>
-<p><s>Strikethrough</s></p>
-<h2 id="blockquotes"><a class="header-anchor" href="#blockquotes"></a>Blockquotes</h2>
-<blockquote>
-<p>Blockquotes can also be nested…</p>
-<blockquote>
-<p>…by using additional greater-than signs right next to each other…</p>
-<blockquote>
-<p>…or with spaces between arrows.</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2 id="lists"><a class="header-anchor" href="#lists"></a>Lists</h2>
-<p>Unordered</p>
-<ul>
-<li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
-<li>Sub-lists are made by indenting 2 spaces:
-<ul>
-<li>Marker character change forces new list start:
-<ul>
-<li>Ac tristique libero volutpat at</li>
-</ul>
-<ul>
-<li>Facilisis in pretium nisl aliquet</li>
-</ul>
-<ul>
-<li>Nulla volutpat aliquam velit</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Very easy!</li>
-</ul>
-<p>Ordered</p>
-<ol>
-<li>
-<p>Lorem ipsum dolor sit amet</p>
-</li>
-<li>
-<p>Consectetur adipiscing elit</p>
-</li>
-<li>
-<p>Integer molestie lorem at massa</p>
-</li>
-<li>
-<p>You can use sequential numbers…</p>
-</li>
-<li>
-<p>…or keep all the numbers as <code>1.</code></p>
-</li>
-</ol>
-<p>Start numbering with offset:</p>
-<ol start="57">
-<li>foo</li>
-<li>bar</li>
-</ol>
-<h2 id="code"><a class="header-anchor" href="#code"></a>Code</h2>
-<p>Inline <code>code</code></p>
-<p>Indented code</p>
-<pre><code>// Some comments
-line 1 of code
-line 2 of code
-line 3 of code
-</code></pre>
-<p>Block code “fences”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sample text here...</span><br></pre></td></tr></table></figure>
-<p>Syntax highlighting</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span> (<span class="params">bar</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> bar++;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo(<span class="number">5</span>));</span><br></pre></td></tr></table></figure>
-<h2 id="tables"><a class="header-anchor" href="#tables"></a>Tables</h2>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>data</td>
-<td>path to data files to supply the data that will be passed into templates.</td>
-</tr>
-<tr>
-<td>engine</td>
-<td>engine to be used for processing templates. Handlebars is the default.</td>
-</tr>
-<tr>
-<td>ext</td>
-<td>extension to be used for dest files.</td>
-</tr>
-</tbody>
-</table>
-<p>Right aligned columns</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">Option</th>
-<th style="text-align:right">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">data</td>
-<td style="text-align:right">path to data files to supply the data that will be passed into templates.</td>
-</tr>
-<tr>
-<td style="text-align:right">engine</td>
-<td style="text-align:right">engine to be used for processing templates. Handlebars is the default.</td>
-</tr>
-<tr>
-<td style="text-align:right">ext</td>
-<td style="text-align:right">extension to be used for dest files.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="links"><a class="header-anchor" href="#links"></a>Links</h2>
-<p><a href="http://dev.nodeca.com" target="_blank" rel="noopener">link text</a></p>
-<p><a href="http://nodeca.github.io/pica/demo/" title="title text!" target="_blank" rel="noopener">link with title</a></p>
-<p>Autoconverted link <a href="https://github.com/nodeca/pica" target="_blank" rel="noopener">https://github.com/nodeca/pica</a> (enable linkify to see)</p>
-<h2 id="images"><a class="header-anchor" href="#images"></a>Images</h2>
-<p><img src="https://octodex.github.com/images/minion.png" alt="Minion"><br>
-<img src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat" title="The Stormtroopocat"></p>
-<p>Like links, Images also have a footnote style syntax</p>
-<p><img src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text" title="The Dojocat"></p>
-<p>With a reference later in the document defining the URL location:</p>
-<h2 id="plugins"><a class="header-anchor" href="#plugins"></a>Plugins</h2>
-<p>The killer feature of <code>markdown-it</code> is very effective support of<br>
-<a href="https://www.npmjs.org/browse/keyword/markdown-it-plugin" target="_blank" rel="noopener">syntax plugins</a>.</p>
-<h3 id="emojies"><a class="header-anchor" href="#emojies"></a><a href="https://github.com/markdown-it/markdown-it-emoji" target="_blank" rel="noopener">Emojies</a></h3>
-<blockquote>
-<p>Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:</p>
-<p>Shortcuts (emoticons): :-) :-( 8-) ;)</p>
-</blockquote>
-<p>see <a href="https://github.com/markdown-it/markdown-it-emoji#change-output" target="_blank" rel="noopener">how to change output</a> with twemoji.</p>
-<h3 id="subscript-superscript"><a class="header-anchor" href="#subscript-superscript"></a><a href="https://github.com/markdown-it/markdown-it-sub" target="_blank" rel="noopener">Subscript</a> / <a href="https://github.com/markdown-it/markdown-it-sup" target="_blank" rel="noopener">Superscript</a></h3>
-<ul>
-<li>19<sup>th</sup></li>
-<li>H<sub>2</sub>O</li>
-</ul>
-<h3 id="ins"><a class="header-anchor" href="#ins"></a><a href="https://github.com/markdown-it/markdown-it-ins" target="_blank" rel="noopener">&lt;ins&gt;</a></h3>
-<p><ins>Inserted text</ins></p>
-<h3 id="mark"><a class="header-anchor" href="#mark"></a><a href="https://github.com/markdown-it/markdown-it-mark" target="_blank" rel="noopener">&lt;mark&gt;</a></h3>
-<p><mark>Marked text</mark></p>
-<h3 id="footnotes"><a class="header-anchor" href="#footnotes"></a><a href="https://github.com/markdown-it/markdown-it-footnote" target="_blank" rel="noopener">Footnotes</a></h3>
-<p>Footnote 1 link<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>.</p>
-<p>Footnote 2 link<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
-<p>Inline footnote<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> definition.</p>
-<p>Duplicated footnote reference<sup class="footnote-ref"><a href="#fn2" id="fnref2:1">[2:1]</a></sup>.</p>
-<h3 id="definition-lists"><a class="header-anchor" href="#definition-lists"></a><a href="https://github.com/markdown-it/markdown-it-deflist" target="_blank" rel="noopener">Definition lists</a></h3>
-<dl>
-<dt>Term 1</dt>
-<dd>
-<p>Definition 1<br>
-with lazy continuation.</p>
-</dd>
-<dt>Term 2 with <em>inline markup</em></dt>
-<dd>
-<p>Definition 2</p>
-<pre><code>  { some code, part of Definition 2 }
-</code></pre>
-<p>Third paragraph of definition 2.</p>
-</dd>
-</dl>
-<p><em>Compact style:</em></p>
-<dl>
-<dt>Term 1</dt>
-<dd>Definition 1</dd>
-<dt>Term 2</dt>
-<dd>Definition 2a</dd>
-<dd>Definition 2b</dd>
-</dl>
-<h3 id="abbreviations"><a class="header-anchor" href="#abbreviations"></a><a href="https://github.com/markdown-it/markdown-it-abbr" target="_blank" rel="noopener">Abbreviations</a></h3>
-<p>This is <abbr title="Hyper Text Markup Language">HTML</abbr> abbreviation example.</p>
-<p>It converts “<abbr title="Hyper Text Markup Language">HTML</abbr>”, but keep intact partial entries like “xxxHTMLyyy” and so on.</p>
-<h3 id="custom-containers"><a class="header-anchor" href="#custom-containers"></a><a href="https://github.com/markdown-it/markdown-it-container" target="_blank" rel="noopener">Custom containers</a></h3>
-<p>info container</p>
-<div class="info">
-<p>sample code</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> temp = i;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">float</span> q = i + (rand() % <span class="number">100</span>);</span><br><span class="line">        q = <span class="built_in">sqrt</span>(q);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, q);</span><br><span class="line">    &#125; <span class="keyword">while</span> (i++);</span><br><span class="line">    i = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div>
-<p>warning container:</p>
-<div class="warning">
-<p><em>here be dragons</em></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">int</span> temp = i;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">float</span> q = i + (rand() % <span class="number">100</span>);</span><br><span class="line">        q = <span class="built_in">sqrt</span>(q);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, q);</span><br><span class="line">    &#125; <span class="keyword">while</span> (i--);</span><br><span class="line">    i = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div>
-<p>danger container:</p>
-<div class="danger">
-<p>infinite loop code</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">float</span> q = i + (rand() % <span class="number">100</span>);</span><br><span class="line">        q = <span class="built_in">sqrt</span>(q);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%f\n"</span>, q);</span><br><span class="line">    &#125; <span class="keyword">while</span> (i--);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div>
-<h3 id="to-do-list"><a class="header-anchor" href="#to-do-list"></a>to do list</h3>
-<p><input type="checkbox" id="checkbox1"><label for="checkbox1">  entry1</label><br>
-<input type="checkbox" id="checkbox0" checked="true"><label for="checkbox0">  entry2</label></p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p>Footnote <strong>can have markup</strong></p>
-<p>and multiple paragraphs. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn2" class="footnote-item"><p>Footnote text. <a href="#fnref2" class="footnote-backref">↩︎</a> <a href="#fnref2:1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="fn3" class="footnote-item"><p>Text of inline footnote <a href="#fnref3" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
 </section>
-
-          </div>
-          <div class="toggle-input article-more-link"><a>Read More +</a></div>
-        
-      
-    </div>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-install-igh-ethercat-master-on-raspberry-pi-backup" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-    <a href="/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" class="article-date">
-  <time datetime="2018-01-27T11:39:30.000Z" itemprop="datePublished">2018-01-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/no-category/">no category</a>
-  </div>
-
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/">Install IgH EtherCAT Master on Raspberry Pi &amp; Backup</a>
-    </h1>
-  
-
-      </header>
-    
-    <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" data-id="ck037nzl00002gqd9gbfxejw6" class="article-share-link">Share</a>
-      
-        <a href="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Raspberry-Pi/">Raspberry Pi</a></li></ul>
-
-    </footer>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-          <div class="toggle-content">
-            
-<h1>Install</h1>
-<p>Referring to the installation guide in the Igh maunal. It's pretty simple to install the Igh EtherCAT on raspi. Below records my steps to install Igh.</p>
-<h4>1. update kernel and download kernel source</h4>
-<div class="highlight"><pre><span></span>$ sudo rpi-update
-$ reboot
-$ git clone https://github.com/notro/rpi-source
-$ python rpi-source
-</pre></div>
-
-
-<p style="line-height:1.0"></p>
-
-<h4>2. If rpi-source failed because of complier version, you need to change to the one that compile kernel. e.g.</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ sudo apt-get install -y gcc-4.8
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 <span class="m">20</span>
-$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.8 <span class="m">50</span>
-</pre></div>
-
-
-<p></p><p style="line-height:1.0"></p><p></p>
-<h4>3. download ethercat</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ wget https://etherlab.org/download/ethercat/ethercat-1.5.2.tar.bz2
-$ tar jxf ethercat-1.5.2.tar.bz2
-</pre></div>
-
-
-<p></p><p style="line-height:1.0"></p><p></p>
-<h4>4. intall automake and kernel source</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ sudo apt-get install automake autoconf libtool
-$ sudo apt-get install linux-source
-</pre></div>
-
-
-<p></p><p style="line-height:1.0"></p><p></p>
-<h4>5. start install IgH EtherCAT</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ ./bootstrap
-$ ./configure
-$ make all modules
-$ sudo make modules_install install
-$ sudo depmod
-</pre></div>
-
-<blockquote><strong>Note here:</strong> if <code>make install</code> failed due to FPU problem (softfp ABI?), use <code>touch</code>  on the failed target.</blockquote>
-
-<p style="line-height:1.0"></p>
-
-<h4>6. create soft link</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ sudo ln -s /opt/etherlab/etc/init.d/ethercat /etc/init.d/ethercat
-$ sudo mkdir /etc/sysconfig
-$ sudo cp /opt/etherlab/etc/sysconfig/ethercat /etc/sysconfig/ethercat
-</pre></div>
-
-
-<p></p><p style="line-height:1.0"></p><p></p>
-<h4>7. config ethercat, you need to fill in MASTER0_DEVICE with <strong>eth0</strong> MAC address, and fill in DEVICE_MODULES with "generic"</h4>
-<!-- language: shell -->
-
-<div class="highlight"><pre><span></span>$ ifconfig
-$ sudo vim /etc/sysconfig/ethercat
-</pre></div>
-
-
-<p></p><p style="line-height:1.0"></p><p></p>
-<h4>8. finish up</h4>
-<!-- language: shell -->
-
-<div class="highlight" style="margin-bottom: 20px"><pre><span></span>$ sudo <span class="nb">echo</span> <span class="nv">KERNEL</span><span class="o">==</span><span class="se">\&quot;</span>EtherCAT<span class="o">[</span><span class="m">0</span>-9<span class="o">]</span>*<span class="se">\&quot;</span>, <span class="nv">MODE</span><span class="o">=</span><span class="se">\&quot;</span><span class="m">0664</span><span class="se">\&quot;</span> &gt; /etc/udev/rules.d/99-EtherCAT.rules
-$ ln -s /opt/etherlab/bin/ethercat /usr/local/bin/ethercat
-</pre></div>
-
-<hr>
-
-<h1>Backup</h1>
-<p>After we install the Igh EtherCAT, it might be faster that we use the backup image on the new raspi machine.</p>
-<p>Find out which devices are currently available:</p>
-<div class="highlight"><pre><span></span>$ df -h
-</pre></div>
-
-
-<p>use command <code>dmesg</code> to confirm that new device you inserted is SD card.
-<strong>Always make sure that <em>if</em> is the device to read and <em>of</em> is the device to write.</strong></p>
-<p>To backup SD card: (it might take a while)</p>
-<div class="highlight"><pre><span></span>$ sudo dd <span class="k">if</span><span class="o">=</span>/dev/sdc <span class="nv">of</span><span class="o">=</span>/SDCardBackup.img
-</pre></div>
-
-
-<p>To restore the image:</p>
-<div class="highlight"><pre><span></span>$ sudo dd <span class="nv">bs</span><span class="o">=</span>4M <span class="k">if</span><span class="o">=</span>/SDCardBackup.img <span class="nv">of</span><span class="o">=</span>/dev/sdc
-</pre></div>
-
-
-<p>Before ejecting the SD card, make sure that your Linux PC has completed writing:</p>
-<div class="highlight"><pre><span></span>$ sudo sync
-</pre></div>
-
-
-<p>Don't forget to fill in MAC address of the new machine.</p>
-
-          </div>
-          <div class="toggle-input article-more-link"><a>Read More +</a></div>
-        
-      
-    </div>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-violet-evergarden-pv4violet-snow-huransuyu-ver-lyric" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-    <a href="/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" class="article-date">
-  <time datetime="2018-01-27T02:38:42.000Z" itemprop="datePublished">2018-01-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/no-category/">no category</a>
-  </div>
-
-    
-  </div>
-  <div class="article-inner">
-    
-  <div class="article-gallery">
-    <div class="article-gallery-photos">
-      
-        <a class="article-gallery-img fancybox" href="/images/violet_snow_fr_cover.png" rel="gallery_ck037nzl30003gqd94ml22csf">
-          <img src="/images/violet_snow_fr_cover.png" itemprop="image">
-        </a>
-      
-    </div>
-  </div>
-  <div style="text-align: center">
-  
-  </div>
-
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/">Violet Evergarden PV4「Violet Snow」フランス語Ver. lyric</a>
-    </h1>
-  
-
-      </header>
-    
-    <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" data-id="ck037nzl30003gqd94ml22csf" class="article-share-link">Share</a>
-      
-        <a href="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lyric/">lyric</a></li></ul>
-
-    </footer>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-          <div class="toggle-content">
-            
-<h2>PV2</h2>
-
-<div class="video-container"><iframe src="//www.youtube.com/embed/wMMUWABNQmU" frameborder="0" allowfullscreen></iframe></div>
-
-<h2>sous-titres français</h2>
-<p>La vie, ce voyage. Teinté de solitude, de désespoir.<br>
-Dont elle chasse les nuages. Douée, dévouée.<br>
-Elle tient toujours toutes ses promesses.<br>
-Chaque fin est un nouveau départ <br>
-La vie est remplie de surprises.<br>
-Mais nous donne toujours une lueur d'espoir.<br></p>
-<p>Laisse le temps passer.<br>
-Tes plaies vont se fermer.<br> 
-Car rien n'est plus précieux que l'amour.<br>
-Noble, fidèle. Elle est aussi pure que la neige.<br> 
-Son cœur est velours.<br></p>
-<p>Elle parcourt son destin.<br>
-Dans ses yeux pas l'ombre d'un doute.<br>
-Une brebis fragile.<br>
-Seule face aux périls.<br>
-Mais qui ne connaît pas la paix<br>
-Sans forcer sa douceur.<br></p>
-<p>Sans cesse désemparée.<br>
-Cherchant le grand amour.<br>
-Sa vie est aussi douce qu'un baiser.<br>
-En paix, enchantée,<br>
-Sèche tes larmes pour t'envoler.<br>
-Son cœur est velours.<br></p>
-<p>Laisse le temps passer.<br>
-Tes plaies vont se fermer.<br> 
-Car rien n'est plus précieux que l'amour.<br>
-Noble, fidèle. Elle est aussi pure que la neige.<br> 
-Son cœur est velours.<br></p>
-    
-
-          </div>
-          <div class="toggle-input article-more-link"><a>Read More +</a></div>
-        
-      
-    </div>
-  </div>
-  
-</article>
-
-
-  
-
-
 </section>
         
           <aside id="sidebar">
@@ -922,11 +403,13 @@ Son cœur est velours.<br></p>
 <script>
   var disqus_shortname = 'st9540808';
   
+  var disqus_url = 'http://st9540808.github.io/2019/09/02/ros2-get-started/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
