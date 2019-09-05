@@ -24,7 +24,7 @@
 }
 .article-entry code {
   font-size: 90%;
-  color: #333;
+  color: inherit !important;
   background-color: rgba(0,0,0,0.04);
   font-family: Consolas;
   border: 1px solid #858585;
@@ -189,10 +189,6 @@ pre .javascript .function {
 .info figure,
 .warning figure {
   margin-bottom: 16px !important;
-}
-h3 code {
-  color: #f8f8f8 !important;
-  border-width: 0px !important;
 }
 .danger {
   background-color: #feeeed;

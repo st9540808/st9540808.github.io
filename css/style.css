@@ -315,18 +315,6 @@ body {
 .article-entry h3,
 .widget h3 {
   font-size: 1.3em;
-  color: #fff;
-  background-color: #434343;
-  padding: 4px 4px 4px 40px;
-}
-.article-entry h3 a,
-.widget h3 a {
-  color: #addcfa;
-  text-decoration: none;
-}
-.article-entry h3 a:hover,
-.widget h3 a:hover {
-  text-decoration: underline;
 }
 .article-entry h4,
 .widget h4 {
@@ -1316,7 +1304,7 @@ a.article-title:hover {
 }
 .article-entry code {
   font-size: 90%;
-  color: #333;
+  color: inherit !important;
   background-color: rgba(0,0,0,0.04);
   font-family: Consolas;
   border: 1px solid #858585;
@@ -1528,7 +1516,7 @@ pre .javascript .function {
 }
 .article-entry code {
   font-size: 90%;
-  color: #333;
+  color: inherit !important;
   background-color: rgba(0,0,0,0.04);
   font-family: Consolas;
   border: 1px solid #858585;
@@ -1701,10 +1689,6 @@ pre .javascript .function {
 .info figure,
 .warning figure {
   margin-bottom: 16px !important;
-}
-h3 code {
-  color: #f8f8f8 !important;
-  border-width: 0px !important;
 }
 .danger {
   background-color: #feeeed;
