@@ -16,7 +16,7 @@
 <meta property="og:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: 1$ ros2 pkg create --dependencies [deps] 以下為具有兩個 p">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.imgur.com/AnQVROq.png">
-<meta property="og:updated_time" content="2019-09-05T02:09:23.282Z">
+<meta property="og:updated_time" content="2019-09-05T02:11:40.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ROS2 快速入門">
 <meta name="twitter:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: 1$ ros2 pkg create --dependencies [deps] 以下為具有兩個 p">
@@ -97,7 +97,7 @@
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck061yj840006u4d9ws753ngq" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck0621ggr00065dd9dnd7lebm" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/02/ros2-get-started/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -172,7 +172,7 @@ e.g.</p>
 <p></p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="built_in">std</span>::chrono::hours <span class="keyword">operator</span> <span class="string">""</span>h(<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> h)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::chrono::hours(h);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>std::chrono::hours</code> is a helper type of <code>std::chrono::duration</code> (C++14)<br>
-以下是 <code>std::chrono::hours</code> 的定義:</p>
+以下是 <code>std::chrono::hours</code> 的定義：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> chrono</span><br><span class="line">&#123;</span><br><span class="line">...</span><br><span class="line">  <span class="keyword">typedef</span> duration&lt;<span class="keyword">int64_t</span>, ratio&lt;<span class="number">3600</span>&gt;&gt;  hours;</span><br><span class="line">&#125; <span class="comment">// namespace chrono</span></span><br></pre></td></tr></table></figure>
 <p>這些 User-defined literals 也支援 operator overloading 的算術操作、比較運算子等，甚至可以對不同時間間隔做操作 (如 h, min, s)，因為他們都是 <code>duration</code> 的別名，只差在是不同的 template specialization，更詳盡的介紹可以參考 <a href="http://cppreference.com" target="_blank" rel="noopener">cppreference.com</a> 上關於 <a href="https://en.cppreference.com/w/cpp/chrono/duration" target="_blank" rel="noopener"><code>std::chrono::duration</code></a> 的頁面。</p>
 <p>以下示範對於不同時間間隔的操作：</p>
