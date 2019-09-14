@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://st9540808.github.io/images/Screenshot_from_2019-09-10_14-45-05.png">
 <meta property="og:image" content="https://i.imgur.com/l3eCIZW.png">
 <meta property="og:image" content="https://wiki.st.com/stm32mpu/nsfr_img_auth.php/9/9c/STM32MPU_Embedded_Software_architecture_overview.png">
-<meta property="og:updated_time" content="2019-09-14T18:31:57.163Z">
+<meta property="og:updated_time" content="2019-09-14T19:17:26.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eBPF for ROS2 #1: 開始測量效能">
 <meta name="twitter:description" content="Weekly Meeting 2019-09-10 在我的上一篇文中實作了最簡單的 publisher 和 subscriber，而當中的 callback 是使用 C++11 lambda。 現在就開始作一個簡單的效能分析，目標是量測從一個 node 發布一個字串到另一個 node 上之間的延遲 (latency)，其中會需要找到兩個 callback 的 symbol，因為 C++11 lam">
@@ -100,7 +100,7 @@
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/" data-id="ck0jw3pkv0002qfd9lk098vsn" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/" data-id="ck0jxo59m0002zmd90rxi3dd9" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -173,7 +173,7 @@ CPU: Intel® Core™ i5-2520M CPU @ 2.50GHz (2C4T)</p>
 <p>其實要找到 demangled symbol 只需要使用 <code>$ nm -C</code> 就可以了，感覺根本不需要這麼複雜。</p>
 </div>
 <h3 id="register-probe-function"><a class="header-anchor" href="#register-probe-function"></a>Register probe function</h3>
-<p>使用剛剛找到的 symbol 並將其帶入 <code>attach_uprobe()</code> 便能完成註冊，一旦 <code>Talker::callback()</code> 被呼叫，註冊的 <code>talker_probe</code> 就會被執行。 更多 uprobe (在 userspace 追蹤程式) 的相關的資訊請看底下 <a href="##References">References</a>。</p>
+<p>使用剛剛找到的 symbol 並將其帶入 <code>attach_uprobe()</code> 便能完成註冊，一旦 <code>Talker::callback()</code> 被呼叫，註冊的 <code>talker_probe</code> 就會被執行。 更多 uprobe (在 userspace 追蹤程式) 的相關的資訊請看底下 <a href="#references">References</a>。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b.attach_uprobe(name=<span class="string">"./ros2_course/install/ros_course_demo/lib/ros_course_demo/talker"</span>,</span><br><span class="line">                sym=<span class="string">"_ZN6Talker8callbackEv"</span>, fn_name=<span class="string">"talker_probe"</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="measure-latency"><a class="header-anchor" href="#measure-latency"></a>Measure latency</h3>
 <p>以下為測量方法的時序圖。<br>

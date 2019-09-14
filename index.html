@@ -92,7 +92,7 @@
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/" data-id="ck0jw3pkv0002qfd9lk098vsn" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/" data-id="ck0jxo59m0002zmd90rxi3dd9" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/10/eBPF-for-ROS2-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -161,7 +161,7 @@ CPU: Intel® Core™ i5-2520M CPU @ 2.50GHz (2C4T)</p>
 <p>其實要找到 demangled symbol 只需要使用 <code>$ nm -C</code> 就可以了，感覺根本不需要這麼複雜。</p>
 </div>
 <h3 id="register-probe-function"><a class="header-anchor" href="#register-probe-function"></a>Register probe function</h3>
-<p>使用剛剛找到的 symbol 並將其帶入 <code>attach_uprobe()</code> 便能完成註冊，一旦 <code>Talker::callback()</code> 被呼叫，註冊的 <code>talker_probe</code> 就會被執行。 更多 uprobe (在 userspace 追蹤程式) 的相關的資訊請看底下 <a href="##References">References</a>。</p>
+<p>使用剛剛找到的 symbol 並將其帶入 <code>attach_uprobe()</code> 便能完成註冊，一旦 <code>Talker::callback()</code> 被呼叫，註冊的 <code>talker_probe</code> 就會被執行。 更多 uprobe (在 userspace 追蹤程式) 的相關的資訊請看底下 <a href="#references">References</a>。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">b.attach_uprobe(name=<span class="string">"./ros2_course/install/ros_course_demo/lib/ros_course_demo/talker"</span>,</span><br><span class="line">                sym=<span class="string">"_ZN6Talker8callbackEv"</span>, fn_name=<span class="string">"talker_probe"</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="measure-latency"><a class="header-anchor" href="#measure-latency"></a>Measure latency</h3>
 <p>以下為測量方法的時序圖。<br>
@@ -237,7 +237,7 @@ Cross compile ROS2 for ARMv7</p>
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck0jw3pl70007qfd9rlpaxvsi" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck0jxo5a90007zmd9vwqkzglo" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/02/ros2-get-started/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -364,7 +364,7 @@ rclcpp library api : <a href="http://docs.ros2.org/dashing/api/rclcpp/" target="
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/08/15/demo/" data-id="ck0jw3pkq0001qfd9n6esspkv" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/08/15/demo/" data-id="ck0jxo59d0001zmd916h9ppp7" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/08/15/demo/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -648,7 +648,7 @@ with lazy continuation.</p>
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" data-id="ck0jw3pkz0003qfd97otic4ng" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/" data-id="ck0jxo5a60006zmd935jjutrn" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2018/01/27/install-igh-ethercat-master-on-raspberry-pi-backup/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -799,7 +799,7 @@ $ ln -s /opt/etherlab/bin/ethercat /usr/local/bin/ethercat
   <div class="article-gallery">
     <div class="article-gallery-photos">
       
-        <a class="article-gallery-img fancybox" href="/images/violet_snow_fr_cover.png" rel="gallery_ck0jw3pl50006qfd91ckuxp7r">
+        <a class="article-gallery-img fancybox" href="/images/violet_snow_fr_cover.png" rel="gallery_ck0jxo59t0003zmd9l8k4qxxj">
           <img src="/images/violet_snow_fr_cover.png" itemprop="image">
         </a>
       
@@ -821,7 +821,7 @@ $ ln -s /opt/etherlab/bin/ethercat /usr/local/bin/ethercat
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" data-id="ck0jw3pl50006qfd91ckuxp7r" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/" data-id="ck0jxo59t0003zmd9l8k4qxxj" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2018/01/27/violet-evergarden-pv4violet-snow-huransuyu-ver-lyric/#disqus_thread" class="article-comment-link">Comments</a>
       
