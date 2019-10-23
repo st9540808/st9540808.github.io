@@ -16,7 +16,7 @@
 <meta property="og:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: $ ros2 pkg create --dependencies [deps] 以下為具有兩個 pa">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://st9540808.github.io/images/Screenshot_from_2019-08-27_14-55-27.png">
-<meta property="og:updated_time" content="2019-09-14T18:27:21.492Z">
+<meta property="og:updated_time" content="2019-10-22T08:34:07.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ROS2 快速入門">
 <meta name="twitter:description" content="這裡已預設 ROS2 已安裝好，不論使用 apt 安裝或者是 github 上的 archive 都可以，且已設置好必要的環境變數 (setup.bash 腳本) 這邊使用 dashing distro。 Create ROS2 workspace create an empty package: $ ros2 pkg create --dependencies [deps] 以下為具有兩個 pa">
@@ -97,7 +97,7 @@
       </header>
     
     <footer class="article-footer">
-      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck1h5nyzj0007r8d98wjermr8" class="article-share-link">Share</a>
+      <a data-url="http://st9540808.github.io/2019/09/02/ros2-get-started/" data-id="ck22kfwaj0003ijd9sc8qberx" class="article-share-link">Share</a>
       
         <a href="http://st9540808.github.io/2019/09/02/ros2-get-started/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -162,6 +162,7 @@ e.g.</p>
 <div class="info">
 <p><code>make_shared()</code> 會回傳一個 <code>std::shared_ptr</code>， ROS2 的 Timer 已經定義好 <code>rclcpp::TimerBase::SharedPtr</code> 當作 base pointer 使用來操作不同類型的 WallTimer。</p>
 </div>
+<hr>
 <h3 id="std-chrono"><a class="header-anchor" href="#std-chrono"></a><strong><code>std::chrono</code></strong></h3>
 <p>為何可以使用 <code>1s</code> 當作一秒帶入 <code>create_wall_timer()</code> 呢？因為這邊使用了 C++11 的語法 <strong>User-defined literals</strong></p>
 <blockquote>
@@ -182,7 +183,7 @@ e.g.</p>
 <p>只要加上這一行就可以使用 <code>std::chrono</code> 的 User-defined literals</p>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>::chrono_literals;</span><br></pre></td></tr></table></figure>
 <h3 id="demo"><a class="header-anchor" href="#demo"></a>demo</h3>
-<p><img src="/images/Screenshot_from_2019-08-27_14-55-27.png" alt="demo 結果，先執行 listener 再執行 talker"></p>
+<p><img src="/images/Screenshot_from_2019-08-27_14-55-27.png" alt="demo 結果，先執行 talker 再執行 listener (所以字串才從 4 開始)"></p>
 <h2 id="references"><a class="header-anchor" href="#references"></a>References</h2>
 <p>rclcpp example : <a href="https://github.com/ros2/examples/tree/master/rclcpp" target="_blank" rel="noopener">https://github.com/ros2/examples/tree/master/rclcpp</a><br>
 rclcpp library api : <a href="http://docs.ros2.org/dashing/api/rclcpp/" target="_blank" rel="noopener">http://docs.ros2.org/dashing/api/rclcpp/</a></p>
